@@ -1,0 +1,28 @@
+mysql -u root -p //cmd
+
+
+GRANT ALL PRIVILEGES ON `tetris`.* TO 'Game'@'localhost';
+FLUSH PRIVILEGES;
+
+SHOW GRANTS FOR 'Game'@'localhost';
+
+
+admin
+
+Game password
+
+CREATE DATABASE Tetris;
+
+use Tetris
+
+DROP TABLE lite;
+DROP TABLE norm;
+DROP TABLE hard;
+
+CREATE TABLE lite(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255),line INT, time INT);
+CREATE TABLE norm(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255),line INT, time INT);
+CREATE TABLE hard(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255),line INT, time INT);
+
+INSERT INTO lite (name, line, time) VALUES ('test', 12, 123);
+INSERT INTO norm (name, line, time) VALUES ('test', 12, 123);
+INSERT INTO hard (name, line, time) VALUES ('test', 12, 123);
